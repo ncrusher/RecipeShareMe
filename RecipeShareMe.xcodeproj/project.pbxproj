@@ -12,16 +12,31 @@
 		00F3EA641EADD6CE005EE679 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F3EA621EADD6CE005EE679 /* Main.storyboard */; };
 		00F3EA661EADD6CE005EE679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F3EA651EADD6CE005EE679 /* Assets.xcassets */; };
 		00F3EA691EADD6CE005EE679 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F3EA671EADD6CE005EE679 /* LaunchScreen.storyboard */; };
+		00F3EA751EB06BE4005EE679 /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F3EA741EB06BE4005EE679 /* FancyView.swift */; };
+		00F3EA771EB06C31005EE679 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F3EA761EB06C31005EE679 /* Constants.swift */; };
+		00F3EA7B1EB06CF6005EE679 /* FancyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F3EA7A1EB06CF6005EE679 /* FancyBtn.swift */; };
+		00F3EA7C1EB06DE8005EE679 /* Carolina Mountains Personal Use.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00F3EA731EB066B7005EE679 /* Carolina Mountains Personal Use.ttf */; };
+		00F3EA801EB06F35005EE679 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00F3EA7F1EB06F35005EE679 /* GoogleService-Info.plist */; };
+		9B91DAA0CE0191AF34B9C811 /* Pods_RecipeShareMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60436307E461D7F0C77B065 /* Pods_RecipeShareMe.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		00F3EA5B1EADD6CE005EE679 /* RecipeShareMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeShareMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F3EA5E1EADD6CE005EE679 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		00F3EA601EADD6CE005EE679 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		00F3EA601EADD6CE005EE679 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = RecipeShareMe/ViewController.swift; sourceTree = "<group>"; };
 		00F3EA631EADD6CE005EE679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		00F3EA651EADD6CE005EE679 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00F3EA681EADD6CE005EE679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00F3EA6A1EADD6CE005EE679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00F3EA731EB066B7005EE679 /* Carolina Mountains Personal Use.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Carolina Mountains Personal Use.ttf"; sourceTree = "<group>"; };
+		00F3EA741EB06BE4005EE679 /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
+		00F3EA761EB06C31005EE679 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		00F3EA7A1EB06CF6005EE679 /* FancyBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyBtn.swift; sourceTree = "<group>"; };
+		00F3EA7F1EB06F35005EE679 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		00F3EA811EB08081005EE679 /* RecipeShareMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RecipeShareMe.entitlements; sourceTree = "<group>"; };
+		15E53C2D87367D967F0B3298 /* Pods-RecipeShareMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeShareMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeShareMe/Pods-RecipeShareMe.release.xcconfig"; sourceTree = "<group>"; };
+		5EDBAF2FFA0FE913478FAF7A /* Pods-RecipeShareMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeShareMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeShareMe/Pods-RecipeShareMe.debug.xcconfig"; sourceTree = "<group>"; };
+		E60436307E461D7F0C77B065 /* Pods_RecipeShareMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipeShareMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B91DAA0CE0191AF34B9C811 /* Pods_RecipeShareMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +54,13 @@
 		00F3EA521EADD6CE005EE679 = {
 			isa = PBXGroup;
 			children = (
+				00F3EA721EB0654A005EE679 /* Controller */,
+				00F3EA711EB06545005EE679 /* View */,
+				00F3EA701EB0653F005EE679 /* Model */,
 				00F3EA5D1EADD6CE005EE679 /* RecipeShareMe */,
 				00F3EA5C1EADD6CE005EE679 /* Products */,
+				4F8286ADBDF2AE7B00EC6D44 /* Pods */,
+				A981F01108001CC882EB76C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +75,58 @@
 		00F3EA5D1EADD6CE005EE679 /* RecipeShareMe */ = {
 			isa = PBXGroup;
 			children = (
+				00F3EA811EB08081005EE679 /* RecipeShareMe.entitlements */,
 				00F3EA5E1EADD6CE005EE679 /* AppDelegate.swift */,
-				00F3EA601EADD6CE005EE679 /* ViewController.swift */,
 				00F3EA621EADD6CE005EE679 /* Main.storyboard */,
 				00F3EA651EADD6CE005EE679 /* Assets.xcassets */,
 				00F3EA671EADD6CE005EE679 /* LaunchScreen.storyboard */,
+				00F3EA731EB066B7005EE679 /* Carolina Mountains Personal Use.ttf */,
 				00F3EA6A1EADD6CE005EE679 /* Info.plist */,
+				00F3EA7F1EB06F35005EE679 /* GoogleService-Info.plist */,
 			);
 			path = RecipeShareMe;
+			sourceTree = "<group>";
+		};
+		00F3EA701EB0653F005EE679 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				00F3EA741EB06BE4005EE679 /* FancyView.swift */,
+				00F3EA761EB06C31005EE679 /* Constants.swift */,
+				00F3EA7A1EB06CF6005EE679 /* FancyBtn.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		00F3EA711EB06545005EE679 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		00F3EA721EB0654A005EE679 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				00F3EA601EADD6CE005EE679 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4F8286ADBDF2AE7B00EC6D44 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5EDBAF2FFA0FE913478FAF7A /* Pods-RecipeShareMe.debug.xcconfig */,
+				15E53C2D87367D967F0B3298 /* Pods-RecipeShareMe.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A981F01108001CC882EB76C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E60436307E461D7F0C77B065 /* Pods_RecipeShareMe.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00F3EA6D1EADD6CE005EE679 /* Build configuration list for PBXNativeTarget "RecipeShareMe" */;
 			buildPhases = (
+				E7EB1A6CE66CDFF45420C511 /* [CP] Check Pods Manifest.lock */,
 				00F3EA571EADD6CE005EE679 /* Sources */,
 				00F3EA581EADD6CE005EE679 /* Frameworks */,
 				00F3EA591EADD6CE005EE679 /* Resources */,
+				537F4E358B2036E2E9DEE82A /* [CP] Embed Pods Frameworks */,
+				F97F941843BC3632BB4CC0FC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,7 +164,13 @@
 				TargetAttributes = {
 					00F3EA5A1EADD6CE005EE679 = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = Q5U8663VQ2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -123,6 +197,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00F3EA801EB06F35005EE679 /* GoogleService-Info.plist in Resources */,
+				00F3EA7C1EB06DE8005EE679 /* Carolina Mountains Personal Use.ttf in Resources */,
 				00F3EA691EADD6CE005EE679 /* LaunchScreen.storyboard in Resources */,
 				00F3EA661EADD6CE005EE679 /* Assets.xcassets in Resources */,
 				00F3EA641EADD6CE005EE679 /* Main.storyboard in Resources */,
@@ -131,13 +207,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		537F4E358B2036E2E9DEE82A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RecipeShareMe/Pods-RecipeShareMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7EB1A6CE66CDFF45420C511 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F97F941843BC3632BB4CC0FC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RecipeShareMe/Pods-RecipeShareMe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		00F3EA571EADD6CE005EE679 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00F3EA7B1EB06CF6005EE679 /* FancyBtn.swift in Sources */,
 				00F3EA611EADD6CE005EE679 /* ViewController.swift in Sources */,
 				00F3EA5F1EADD6CE005EE679 /* AppDelegate.swift in Sources */,
+				00F3EA751EB06BE4005EE679 /* FancyView.swift in Sources */,
+				00F3EA771EB06C31005EE679 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +385,11 @@
 		};
 		00F3EA6E1EADD6CE005EE679 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EDBAF2FFA0FE913478FAF7A /* Pods-RecipeShareMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RecipeShareMe/RecipeShareMe.entitlements;
+				DEVELOPMENT_TEAM = Q5U8663VQ2;
 				INFOPLIST_FILE = RecipeShareMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Kaiba-Corp.RecipeShareMe";
@@ -270,8 +400,11 @@
 		};
 		00F3EA6F1EADD6CE005EE679 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15E53C2D87367D967F0B3298 /* Pods-RecipeShareMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RecipeShareMe/RecipeShareMe.entitlements;
+				DEVELOPMENT_TEAM = Q5U8663VQ2;
 				INFOPLIST_FILE = RecipeShareMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Kaiba-Corp.RecipeShareMe";
@@ -299,6 +432,7 @@
 				00F3EA6F1EADD6CE005EE679 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
