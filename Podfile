@@ -12,6 +12,6 @@ target 'RecipeShareMe' do
   pod 'Firebase/Storage'
   pod 'FBSDKLoginKit'
   pod 'FacebookLogin'
-  pod 'SwiftKeychainWrapper'
+  pod 'SwiftKeychainWrapper', '~> 3.0'
   
 end

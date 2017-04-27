@@ -12,7 +12,7 @@ import FBSDKLoginKit
 
 import Firebase
 import FacebookLogin
-
+import SwiftKeychainWrapper
 
 class ViewController: UIViewController, FBSDKLoginButtonDelegate{
 
@@ -29,13 +29,22 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate{
     FBButton.delegate = self
     FBButton.readPermissions = ["email"]
     
-        
+    
         
     super.viewDidLoad()
-        
-        
-        
 
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        
+        //checking if the key exist
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
+        
+        
     }
 
     
@@ -47,7 +56,9 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate{
             FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
                 if error == nil { //if no errors then we are sign in
                     print("JESS: Email user authenticated with Firebase")
-                    
+                    if let user = user {
+                    self.completeSignIn(id: user.uid)
+                    }
                     
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
@@ -56,12 +67,22 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate{
                             
                         } else {
                             print("JESS: Successfully authenticated with Firebase")
-                            
+                            if let user = user {
+                                self.completeSignIn(id: user.uid)
+                            }
                         }
                     })
                 }
             })
         }
+    }
+    
+    func completeSignIn(id: String){
+        
+        let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        print("JESS: Data saved to keychain\(keychainResult)")
+        performSegue(withIdentifier: "goToFeed", sender: nil)
+        
     }
     
     
@@ -99,8 +120,12 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate{
             }
             
             print("Successfully logged in with our user: ", user!)
+            if let user = user {
+            self.completeSignIn(id: user.uid)
+                }
         })
         
+        //prints out your request what items are stored from your facebook account
         FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"]).start { (connection, result, err) in
             
             if err != nil {
