@@ -18,6 +18,7 @@
 		00F3EA7C1EB06DE8005EE679 /* Carolina Mountains Personal Use.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00F3EA731EB066B7005EE679 /* Carolina Mountains Personal Use.ttf */; };
 		00F3EA801EB06F35005EE679 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00F3EA7F1EB06F35005EE679 /* GoogleService-Info.plist */; };
 		00F3EA851EB1C89B005EE679 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F3EA841EB1C89B005EE679 /* FeedVC.swift */; };
+		00F3EA871EB31D47005EE679 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F3EA861EB31D47005EE679 /* CircleView.swift */; };
 		9B91DAA0CE0191AF34B9C811 /* Pods_RecipeShareMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60436307E461D7F0C77B065 /* Pods_RecipeShareMe.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		00F3EA7F1EB06F35005EE679 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		00F3EA811EB08081005EE679 /* RecipeShareMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RecipeShareMe.entitlements; sourceTree = "<group>"; };
 		00F3EA841EB1C89B005EE679 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		00F3EA861EB31D47005EE679 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		15E53C2D87367D967F0B3298 /* Pods-RecipeShareMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeShareMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeShareMe/Pods-RecipeShareMe.release.xcconfig"; sourceTree = "<group>"; };
 		5EDBAF2FFA0FE913478FAF7A /* Pods-RecipeShareMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeShareMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeShareMe/Pods-RecipeShareMe.debug.xcconfig"; sourceTree = "<group>"; };
 		E60436307E461D7F0C77B065 /* Pods_RecipeShareMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipeShareMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +104,7 @@
 				00F3EA761EB06C31005EE679 /* Constants.swift */,
 				00F3EA741EB06BE4005EE679 /* FancyView.swift */,
 				00F3EA7A1EB06CF6005EE679 /* FancyBtn.swift */,
+				00F3EA861EB31D47005EE679 /* CircleView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				00F3EA611EADD6CE005EE679 /* ViewController.swift in Sources */,
 				00F3EA5F1EADD6CE005EE679 /* AppDelegate.swift in Sources */,
 				00F3EA751EB06BE4005EE679 /* FancyView.swift in Sources */,
+				00F3EA871EB31D47005EE679 /* CircleView.swift in Sources */,
 				00F3EA771EB06C31005EE679 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
