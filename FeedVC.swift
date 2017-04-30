@@ -21,6 +21,12 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         tableView.delegate = self
         tableView.dataSource = self
         
+        //implement a listner whenever something updates in the post it will listen for updates and post the updates to firbase
+        
+        DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+            
+          print(snapshot.value)
+        })
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -58,6 +64,12 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
         
     }
+    
+    @IBAction func postBtnPressed(_ sender: Any) {
+        
+        
+    }
+    
 
 
 }

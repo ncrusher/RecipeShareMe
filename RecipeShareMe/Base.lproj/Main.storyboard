@@ -214,6 +214,9 @@
                                                     <constraint firstAttribute="height" constant="49" id="lCn-is-BEi"/>
                                                 </constraints>
                                                 <state key="normal" image="add-post"/>
+                                                <connections>
+                                                    <action selector="postBtnPressed:" destination="YCn-e3-O4X" eventType="touchUpInside" id="Hbo-jr-rbR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

@@ -41,6 +41,10 @@ class DataService {
         REF_USERS.child(uid).updateChildValues(userData) //Firebase will create a user if it does not exist
     }
     
+    func createFireBasePost(uid: String, postData: Dictionary<String, String>) {
+        
+        
+    }
     
     
 }
