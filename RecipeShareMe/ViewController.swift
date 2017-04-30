@@ -57,7 +57,9 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate{
                 if error == nil { //if no errors then we are sign in
                     print("JESS: Email user authenticated with Firebase")
                     if let user = user {
-                    self.completeSignIn(id: user.uid)
+                        let userData = ["provider": user.providerID] // we are just create a userdata dictionary with a key of provider and addding the provider id
+                        
+                    self.completeSignIn(id: user.uid, userData: userData)
                     }
                     
                 } else {
@@ -68,7 +70,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate{
                         } else {
                             print("JESS: Successfully authenticated with Firebase")
                             if let user = user {
-                                self.completeSignIn(id: user.uid)
+                                let userData = ["provider": user.providerID]
+                                self.completeSignIn(id: user.uid, userData: userData)
                             }
                         }
                     })
@@ -77,8 +80,9 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate{
         }
     }
     
-    func completeSignIn(id: String){
+    func completeSignIn(id: String, userData: Dictionary<String, String>){
         
+        DataService.ds.createFireBaseUser(uid: id, userData: userData)
         let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("JESS: Data saved to keychain\(keychainResult)")
         performSegue(withIdentifier: "goToFeed", sender: nil)
@@ -121,7 +125,9 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate{
             
             print("Successfully logged in with our user: ", user!)
             if let user = user {
-            self.completeSignIn(id: user.uid)
+                let userData = ["provider": credentials.provider] //for facebook the provider is under credentials
+                
+            self.completeSignIn(id: user.uid, userData: userData)
                 }
         })
         
