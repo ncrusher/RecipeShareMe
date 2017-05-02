@@ -10,14 +10,20 @@ import Foundation
 import Firebase
 
 let DB_BASE = FIRDatabase.database().reference() //this gets the URL that is stored in googleservice-info plist
+let STORAGE_BASE = FIRStorage.storage().reference() //this get the the URL in the storage firebase
 
 class DataService {
     
     static let ds = DataService() //creates a singleton, single instance of this class and lets it use in any controller in your app
     
+    
+    //Database references
     private var _REF_BASE = DB_BASE
     private var _REF_POSTS = DB_BASE.child("posts") //child appends posts to the end of the URL, gets all the child of DB_BASE
     private var _REF_USERS = DB_BASE.child("users")
+    
+    // Storage references
+    private var _REF_POST_IMAGES = STORAGE_BASE.child("post-pics")
     
     var REF_BASE: FIRDatabaseReference {
         
@@ -32,6 +38,10 @@ class DataService {
     var REF_USERS: FIRDatabaseReference {
         
         return _REF_USERS
+    }
+    
+    var REF_POST_IMAGES: FIRStorageReference {
+        return _REF_POST_IMAGES
     }
     
     func createFireBaseUser(uid: String, userData: Dictionary<String, String>) {
