@@ -194,12 +194,16 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4Li-yn-NZ7">
                                         <rect key="frame" x="8" y="8" width="327" height="49"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="42v-mZ-w13">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="42v-mZ-w13">
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="49" id="Z4H-yM-xAA"/>
                                                     <constraint firstAttribute="width" constant="49" id="s3v-NX-INF"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="iuw-Ba-jQc" appends="YES" id="QP7-Y0-Z6j"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Add a caption" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ObX-p7-alc">
                                                 <rect key="frame" x="59" y="0.0" width="209" height="49"/>
@@ -365,6 +369,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addImage" destination="42v-mZ-w13" id="AhK-St-0Of"/>
                         <outlet property="tableView" destination="2cQ-E6-oTQ" id="OcL-N9-pq3"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="Wvo-rH-nhy"/>
                     </connections>
@@ -373,6 +378,11 @@
                 <tapGestureRecognizer id="aCY-Jl-2Kp">
                     <connections>
                         <action selector="signOutPressed:" destination="YCn-e3-O4X" id="8JW-P2-Bte"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="iuw-Ba-jQc">
+                    <connections>
+                        <action selector="addImagePressed:" destination="YCn-e3-O4X" id="hJt-FS-k3a"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
