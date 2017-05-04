@@ -14,8 +14,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var captionLbl: UITextField!
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
+    var imageSelected = false // guards against the original image from being uploaded
     
     @IBOutlet weak var addImage: UIImageView!
     
@@ -63,6 +65,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             addImage.image = image
+            imageSelected = true
         } else {
             print("JESS: A valid image wasn't selected")
         
@@ -126,6 +129,41 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     @IBAction func postBtnPressed(_ sender: Any) {
         
+        guard let caption = captionLbl.text, caption != "" else {
+            print("JESS: Caption must be entered")
+            return
+        }
+        
+        guard let img = addImage.image, imageSelected == true else {
+            print("JESS: Image needs to be added")
+            return
+        }
+        
+        // converts our image into imgdata to prepare to be uploaded to firebase
+        if let imgData = UIImageJPEGRepresentation(img, 0.2) {
+            
+            // this creates a unique identifier for the img so we can reference it later
+            let imgUid = NSUUID().uuidString
+            
+            // makes a constant and sets it to firebase meta data, meta data decribes what type of data the data is
+            let metadata = FIRStorageMetadata()
+            
+            // sets the meta data content to image of type JPEG
+            metadata.contentType = "image/JPEG"
+            
+            // we are passing up the information for this img with the corressponding imgUid
+            DataService.ds.REF_POST_IMAGES.child(imgUid).put(imgData, metadata: metadata) { (metadata, error) in
+                if error != nil {
+                    
+                    print("JESS: Unable to upload image to firebase storage.")
+                } else {
+                    print("JESS: Successfully uploaded image to firebase storage")
+                    let downloadURL = metadata?.downloadURL()?.absoluteString
+                    
+                }
+                
+                }
+        }
         
     }
     

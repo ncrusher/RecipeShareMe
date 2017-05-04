@@ -205,7 +205,7 @@
                                                     <outletCollection property="gestureRecognizers" destination="iuw-Ba-jQc" appends="YES" id="QP7-Y0-Z6j"/>
                                                 </connections>
                                             </imageView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Add a caption" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ObX-p7-alc">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ObX-p7-alc">
                                                 <rect key="frame" x="59" y="0.0" width="209" height="49"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
@@ -370,6 +370,7 @@
                     </view>
                     <connections>
                         <outlet property="addImage" destination="42v-mZ-w13" id="AhK-St-0Of"/>
+                        <outlet property="captionLbl" destination="ObX-p7-alc" id="iEt-vd-A9Z"/>
                         <outlet property="tableView" destination="2cQ-E6-oTQ" id="OcL-N9-pq3"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="Wvo-rH-nhy"/>
                     </connections>
