@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 import SwiftKeychainWrapper
 
+
+
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     @IBOutlet weak var tableView: UITableView!
@@ -41,6 +43,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
             
+            self.posts = []
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 
                 for snap in snapshot {
@@ -48,12 +51,14 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                     print("SNAP: \(snap)")
                     if let postDict = snap.value as? Dictionary<String, Any> {
                         let key = snap.key
-                        let post = Post(postKey: key, postData: postDict)
+                        let post = Post(postKey: key, postData: postDict as Dictionary<String, AnyObject>)
                         self.posts.append(post)
                     }
+    
                 }
             }
             self.tableView.reloadData()
+
             
         })
         
@@ -159,6 +164,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                 } else {
                     print("JESS: Successfully uploaded image to firebase storage")
                     let downloadURL = metadata?.downloadURL()?.absoluteString
+                    self.postToFirebase(imgUrl: downloadURL)
                     
                 }
                 
@@ -167,6 +173,26 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
     }
     
-
+    func postToFirebase (imgUrl: String!) {
+        
+        let post: Dictionary<String, Any> = [
+        "caption": captionLbl.text,
+        "imageURL": imgUrl,
+        "likes": 0
+        ]
+        
+        // child by auto id alllows you to create a randomly generated ID
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        
+        // this sets the value to our new post with the data from post. creates a new user and new post
+        firebasePost.setValue(post)
+        
+        // after you ost want to set everything back to default values
+        captionLbl.text = ""
+        imageSelected = false
+        addImage.image = UIImage(named: "add-image")
+        
+        tableView.reloadData()
+    }
 
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import SwiftKeychainWrapper
 
 let DB_BASE = FIRDatabase.database().reference() //this gets the URL that is stored in googleservice-info plist
 let STORAGE_BASE = FIRStorage.storage().reference() //this get the the URL in the storage firebase
@@ -38,6 +39,13 @@ class DataService {
     var REF_USERS: FIRDatabaseReference {
         
         return _REF_USERS
+    }
+    
+    var REF_USER_CURRENT: FIRDatabaseReference {
+        let uid = KeychainWrapper.standard.string(forKey: KEY_UID) // gets the user id from the keychain wrapper
+        let user = REF_USERS.child(uid!) //sets the useer to the user id under that UID and returns that value
+        return user
+        
     }
     
     var REF_POST_IMAGES: FIRStorageReference {
